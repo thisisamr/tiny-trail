@@ -18,6 +18,6 @@ func ResolveUrl(c *fiber.Ctx) error {
 		fmt.Println(err)
 		return c.Status(fiber.StatusInternalServerError).JSON(err)
 	} else {
-		return c.Status(fiber.StatusOK).JSON(value)
+		return c.Redirect(value)
 	}
 }
