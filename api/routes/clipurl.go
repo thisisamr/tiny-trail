@@ -8,8 +8,8 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"github.com/redis/go-redis/v9"
-	"github.com/thisisamr/tiny-trail/Middleware"
-	"github.com/thisisamr/tiny-trail/db"
+	MiddleWare "github.com/thisisamr/tiny-trail/api/Middleware"
+	"github.com/thisisamr/tiny-trail/api/db"
 )
 
 type request struct {

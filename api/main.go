@@ -6,9 +6,9 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"
-	"github.com/thisisamr/tiny-trail/Middleware"
-	"github.com/thisisamr/tiny-trail/db"
-	"github.com/thisisamr/tiny-trail/routes"
+	MiddleWare "github.com/thisisamr/tiny-trail/api/Middleware"
+	"github.com/thisisamr/tiny-trail/api/db"
+	"github.com/thisisamr/tiny-trail/api/routes"
 )
 
 func make_routes(app *fiber.App) {

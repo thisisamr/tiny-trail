@@ -5,7 +5,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/redis/go-redis/v9"
-	"github.com/thisisamr/tiny-trail/db"
+	"github.com/thisisamr/tiny-trail/api/db"
 )
 
 func ResolveUrl(c *fiber.Ctx) error {
