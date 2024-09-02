@@ -10,7 +10,6 @@ import (
 
 // ValidateURL checks if a URL is well-formed and not pointing to localhost or private IPs
 func ValidateURL(input string) error {
-	println(input)
 	u, err := url.ParseRequestURI(input)
 	if err != nil {
 		return fmt.Errorf("invalid URL format: %v", err)
