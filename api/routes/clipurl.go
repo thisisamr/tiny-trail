@@ -52,7 +52,7 @@ func ClipUrl(c *fiber.Ctx) error {
 		if err != nil {
 			return c.Status(fiber.StatusInternalServerError).JSON(err)
 		}
-		response := response{Url: "http://" + os.Getenv("DOMAIN") + "/" + id, Expirey: time.Duration(time_toexpire.Minutes()), XrateLimitReset: time.Duration(time.Duration(v).Minutes()), XrateRemaining: remaining}
+		response := response{Url: "http://" + os.Getenv("DOMAIN") + "/" + id, Expirey: time.Duration(time_toexpire.Minutes()), XrateLimitReset: time.Duration(v.Minutes()), XrateRemaining: remaining}
 		return c.Status(fiber.StatusCreated).JSON(response)
 
 	} else {
@@ -63,7 +63,7 @@ func ClipUrl(c *fiber.Ctx) error {
 			if err != nil {
 				return c.Status(fiber.StatusInternalServerError).JSON(err)
 			} else {
-				response := response{Url: "http://" + os.Getenv("DOMAIN") + "/" + body.Custom_Url, Expirey: time.Duration(time_toexpire.Minutes()), XrateLimitReset: v, XrateRemaining: remaining}
+				response := response{Url: "http://" + os.Getenv("DOMAIN") + "/" + body.Custom_Url, Expirey: time.Duration(time_toexpire.Minutes()), XrateLimitReset: time.Duration(v.Minutes()), XrateRemaining: remaining}
 				return c.Status(fiber.StatusCreated).JSON(response)
 			}
 
